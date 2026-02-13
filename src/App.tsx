@@ -1,14 +1,14 @@
 import "./index.css";
-import {Routes, Route} from 'react-router'
-import MainBody from "./components/MainBody";
+import {Routes, Route, BrowserRouter} from 'react-router'
+import MainPage from "./pages/MainPage";
 function App() {
 
   return(
-  <>
+  <BrowserRouter>
     <Routes>
-      <Route path="/" element={<MainBody/>} />
+      <Route path="/:id" element={<MainPage/>} />
     </Routes>
-  </>)
+  </BrowserRouter>)
 }
 
 export default App;
